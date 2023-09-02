@@ -25,6 +25,10 @@ i {
   
 }
 
+.nav-tab{
+  height: 100dvh;
+}
+
 .links li {
   font-size: 1rem;
   cursor: pointer;
