@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Yummy</title>
+</head>
+
+<body class="overflow-hidden bg-black">
+
+
+<section id="loader" class=" justify-content-center align-items-center w-100  position-fixed ">
+        <div class="lds-default ">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+</section>
+
+
+    <nav class="side-nav-menu min-vh-100 position-fixed d-flex top-0 text-white bg-black opacity-0">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links overflow-hidden">
+                <ul class="list-unstyled">
+                    <li id="searchbtn" class="py-2 position-relative cursor-pointer">Search</li>
+                    <li id="cat" class="py-2 position-relative cursor-pointer">Categories</li>
+                    <li id="areaBtn" class="py-2 position-relative cursor-pointer">Area</li>
+                    <li id="ingredd" class="py-2 position-relative cursor-pointer">Ingredients</li>
+                    <li id="contactBtn" class="py-2 position-relative cursor-pointer">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="side-nav d-flex py-3  flex-column justify-content-between px-3 position-relative  bg-white text-dark text-center">
+            <img class="logo" src="./img/logo.png" alt="">
+            <div class="text-center">
+                <div class="click">
+                    <i class=" open fa-solid fa-bars fa-2xl position-relative"></i>
+                    <i class="fa-solid fa-x fa-2xl close position-relative"></i>
+                </div>
+
+            </div>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </nav>
+
+
+<section id="search" class="position-relative z-1">
+        <div class="container">
+            <div class="row w-100 m-auto  my-4" id="searchInput">
+                <div class="col-md-6">
+                    <input class="form-control text-white" type="text" name="searchName" id="searchName"
+                        placeholder="Search By Name">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control text-white" type="text" name="searchFirst" id="searchFirst"
+                        placeholder="Search By First Letter">
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<section id="main">
+        </div>
+        <div class="container vh-100 ">
+            <div class="row g-4 py-5 overflow-hidden" id="display">
+
+            </div>
+        </div>
+</section>
+
+
+<section id="details">
+        <div class="container my-5">
+            <div class="row text-white det">
+
+            </div>
+        </div>
+</section>
+
+<section id="category">
+        <div class="container my-5">
+            <div class="row g-3" id="catDis">
+
+            </div>
+        </div>
+</section>
+
+
+
+
+<section id="ingred">
+        <div class="container my-5">
+            <div class="row g-3" id="ingrediants">
+
+            </div>
+</section>
+
+
+
+<section id="area">
+        <div class="container my-5">
+            <div class="row g-3" id="showArea">
+
+            </div>
+        </div>
+</section>
+
+
+<section id="contact">
+        <div class="container d-flex justify-content-center align-items-center vh-100 m-auto">
+            <form class="w-75">
+                <div class="row">
+                    <div class="col-md-6 my-3">
+                        <input type="text" name="User" id="User" placeholder="Enter Your Name"
+                            class="form-control bg-white text-dark">
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none text-center ">
+                            Special characters and numbers not allowed
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <input type="email" name="uEmail" id="uEmail" placeholder="Enter Your Email"
+                            class="form-control bg-white text-dark">
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 my-3">
+                        <input type="number" name="phoneN" id="phoneN" placeholder="Enter Your Number"
+                            class="form-control bg-white text-dark">
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none text-center ">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <input type="number" name="age" id="age" placeholder="Enter Your Age"
+                            class="form-control bg-white text-dark">
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                            Enter valid age between (18 - 99)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col-md-6 my-3">
+                        <input type="password" name="password" id="password" placeholder="Enter Your Password"
+                            class="form-control bg-white text-dark">
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <input type="password" name="rePassword" id="rePassword" placeholder="Repassword"
+                            class="form-control bg-white text-dark">
+                        <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                            Enter valid repassword
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" text-center">
+                    <button id="submitBtn" disabled class="btn btn-outline-danger w-auto">Submit</button>
+                </div>
+
+            </form>
+        </div>
+</section>
+
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
