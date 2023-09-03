@@ -80,6 +80,7 @@ $(".click").click(() => {
  ////////////////////// Details //////////////////
 
  async function getDetails(idMeal) {
+    closeSideNav()
    $("#loader").fadeIn(300)
    $('#main, #searchResult ,#search ,#category,#area,.ingredients, #cat2,#contact').fadeOut(500, () => {
        $("#details").fadeIn(200)
@@ -93,7 +94,6 @@ $(".click").click(() => {
 
  function displayDetails(x) {
    let details = ``
-
    details += `
    <i onclick="closeDet()" class="fa-solid fa-xmark fa-xl position-relative"></i>
    <div class="col-md-4">
