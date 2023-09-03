@@ -320,7 +320,7 @@ async function searchByName(searchNameVal) {
     $("#loader").fadeIn(500)
     $(' #area, #searchNres , #category, #cat2, #ingred2 , #ingred, #details').fadeOut(500, () => {
         $("#loader").fadeOut(300, ()=>{
-            $("#main").fadeIn(500,)
+            $("#main").fadeIn(500)
         })
     })
     let searchRes = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchNameVal}`)
